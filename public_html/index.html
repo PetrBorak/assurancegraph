@@ -1,0 +1,125 @@
+<html>
+				<head>
+								<title>TODO supply a title</title>
+								<meta charset="UTF-8">
+								<meta name="viewport" content="width=device-width">
+								<link rel="stylesheet" type="text/css" href="css/main.css">
+								<script data-main="js/main.js" rel="javascript" src="js/require.js"></script>
+				</head>
+				<body>
+								<div ng-controller="calculation" id="mainwrapper">
+												<div  class="left">
+																<div  class="topleft">
+																				<span ng-click="reset()" class="pc-but">Pojistná částka</span>
+																				<div class="calculation-left">
+																								<div count='pc' class="cl-row pojistnacastka">
+																												<span class="clr-left">Pojistná částka</span>
+																												<span class="clr-middle"><input ng-change="change()" ng-model="pc" type="text" value="10000">Kč</span>
+																												<span class="clr-right">
+																																<span class="clrr-upcarret"></span>
+																																<span class="clrr-downcarret"></span>
+																												</span>
+																								</div>
+																								<div count='sh' class="cl-row skutecnahodnota">
+																												<span class="clr-left">Skutečná hodnota</span>
+																												<span class="clr-middle"><input ng-change="change()" ng-model="sh" type="text" value="10000">Kč</span>
+																												<span class="clr-right">
+																																<span class="clrr-upcarret"></span>
+																																<span class="clrr-downcarret"></span>
+																												</span>
+																								</div>
+																								<div count='vpp' class="cl-row vysepojistnehoplneni">
+																												<span class="clr-left">Výše pojistného plnění</span>
+																												<span class="clr-middle"><input ng-change="change()" ng-model="vpp" type="text" value="10000">Kč</span>
+																												<span class="clr-right">
+																																<span class="clrr-upcarret"></span>
+																																<span class="clrr-downcarret"></span>
+																												</span>
+																								</div>
+																				</div>
+																</div>
+																<div class="middleleft">
+																				<span class="total">Pojistné plnění</span>
+																				<span id="total">{{total}}</span>
+																</div>
+																<div class="bottomleft">
+																				© 2014  - Petr Borák
+																</div>
+												</div>
+												<div class="right">
+																
+																<ul class="tabs clearfix">
+																				<li tabs="chart" class="active">Plnění</li>
+																				<li tabs="details">Detaily</li>
+																				<li tabs="notif">Upozornění</li>
+																</ul>
+																<div class="tab-content">
+																				<div class="chart active">
+																								<div class="podpojisteni">
+																												Jedná se o {{podp}}.
+																								</div>
+																								
+																								<div class="percentage">
+																												Hodnota výše pojistného plnění
+dosahuje {{perct}}% škody.
+																								</div>
+																								
+																								<div ng-click="$emit('random','pc')" class="click clickpc pc active">
+																												<div class="carretclick">
+																												</div>
+																								</div>
+																								<div ng-click="$emit('random','sh')" class="click clicksh sh">
+																												<div class="carretclick">
+																												</div>
+																								</div>
+																								<div ng-click="$emit('random','vpp')" class="click clickvpp vpp">
+																												<div class="carretclick">
+																												</div>
+																								</div>																								
+																								
+																								<div id="canvas">
+																												<div class="hidden">
+																												</div>	
+																								</div>
+
+																				</div>
+																				<div class="details">
+																								<div class="formula">
+																												<div class="plneni">plnění =</div> 
+																												<div class="fraction">
+																																<div class="up">
+																																				škoda x suma
+																																</div>
+																																<div class="middle">
+																																				-------------------------
+																																</div>
+																																<div class="bottom">
+																																				hodnota
+																																</div>
+																												</div>
+																								</div>
+																								<div class="formula">
+																												<div class="plneni">plnění =</div>
+																												<div class="fraction">
+																																<div class="up">
+																																				škoda x suma
+																																</div>
+																																<div class="middle">
+																																				-------------------------
+																																</div>
+																																<div class="bottom">
+																																				hodnota
+																																</div>
+																												</div>
+																								</div>
+																				</div>
+																				<div class="notif">
+																								<div class="scov">
+				První část interaktivního modulu umožní nastavení výše pojistné částky, hodnoty pojištěného objektu a výše škody. Jako výsledek se ukáže výše očekávaného pojistného plnění.<br><br>Pokud odpovídá pojistná částka hodnotě pojištěného objektu, pak je pojistné plnění identické s výší škody.<br><br>Pokud je pojistná částka pod hodnotou pojištěného objektu, jedná se o podpojištění a pojistné plnění je nižší než výše škod.<br><br>Pokud je pojistná částka nad hodnotou pojištěného objektu, jedná se o nadpojištění a pojistné plnění je omezeno pojistnou částkou.<br><br>Druhá část interaktivního modulu ukazuje výpočet pojistného plnění podle hodnot uvedených v první části.
+																								</div>
+																				</div>
+																</div>
+												</div>
+								</div>
+				</body>
+</html>

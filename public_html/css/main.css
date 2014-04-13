@@ -1,0 +1,279 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+div, li, ul {
+				box-sizing: border-box;
+}
+#mainwrapper {
+				width: 602px;
+				height: 291px;
+				background: url('../img/mainback.png') no-repeat left top;
+}
+
+.left {
+				float: left;
+				width: 285px;
+				height: 228px;
+				margin: 10px 0 0 12px;
+				padding: 10px;
+				position: relative;
+}
+
+.right {
+				width: 288px;
+				height: 231px;
+				float: left;
+				margin: 12px  0 0 3px;
+}
+
+.tabs {
+				display: block;
+				padding: 0;
+				list-style: none;
+				margin: 0;
+				height: 55px;
+}
+
+.tabs li {
+				cursor: pointer;
+				display: block;
+				float: left;
+				height: 48px;
+				font: bold 14px/33px Arial, sans-serif;
+				color: #2c2d2e;
+				padding: 5px 10px;
+				background: url('../img/tabsdivider.png') no-repeat right top;
+}
+
+.tab-content > div {
+				display: none;
+}
+
+.tab-content > div.active {
+				display: block;
+}
+
+.tabs li.active {
+				background: url('../img/tabsactiveback.png') repeat left top;
+}
+
+.topleft {
+				margin-top: 16px;
+}
+
+.pc-but {
+				display: block;
+				width: 148px;
+				height: 35px;
+				background: url('../img/pcbut.png') no-repeat left top;
+				font: bold 14px/35px Arial, sans-serif;
+				color: white;
+				text-align: center;
+				cursor: pointer;
+				margin-bottom: 7px;
+}
+
+.clr-left {
+				width: 167px;
+				display: inline-block;
+				font: bold 14px Arial, sans-serif;
+}
+
+.cl-row.pojistnacastka .clr-left {
+				color: #25129a;
+}
+
+.cl-row.skutecnahodnota .clr-left {
+				color: #f45e29;
+}
+
+.cl-row.vysepojistnehoplneni .clr-left {
+				color: #c70909;
+}
+
+.clr-middle {
+				width: 65px;
+				background-color: transparent;
+				font: bold 14px Arial, sans-serif;
+				color: white;
+				display: inline-block;
+}
+
+.clr-middle input {
+				width: 45px;
+				background-color: transparent;
+				font: bold 14px Arial, sans-serif;
+				color: white;
+				border: none;
+}
+
+.clr-right {
+				display: inline-block;
+				width: 11px;
+				height: 12px;
+				position: relative;
+}
+
+.clrr-upcarret {
+				display: block;
+				width: 9px;
+				height: 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url('../img/upcarret.png') no-repeat left top;
+}
+
+.clrr-downcarret {
+				position: absolute;
+				display: block;
+				width: 9px;
+				height: 5px;
+				bottom: 0;
+				left: 0;
+				background: url('../img/downcarret.png') no-repeat left top;
+}
+
+.middleleft {
+				margin-top: 10px;
+				font: bold 14px Arial, sans-serif;
+				color: #43871e;
+}
+
+.middleleft .total {
+			display: inline-block;
+			width: 176px;
+}
+
+#total {
+				color: white;
+}
+
+.bottomleft {
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+				font: bold 14px Arial, sans-serif;
+				color: white;
+}
+
+.chart {
+				height: 180px;
+				width: 283px;
+				position: relative;
+}
+
+#canvas canvas {
+				margin: 60px 0 0 20px;
+}
+
+#canvas .hidden {
+				position: absolute;
+				left: -10000px;
+}
+
+.podpojisteni, .percentage{
+				width: 223px;
+				height: 52px;
+				background: url('../img/podpojisteni.png') no-repeat left top;
+				font: bold 14px Arial, sans-serif;
+				color: #6b6632;
+				position: absolute;
+				top: 0px;
+				left: 20px;
+				padding: 15px;
+				text-align: center;
+}
+
+.percentage{
+				background: url('../img/percentage.png') no-repeat left top;
+				color: white;
+				top: auto;
+				bottom: -70px;
+				font: bold 12px Arial, sans-serif;
+				padding-top: 12px;
+}
+
+.details {
+				font: normal 13px Arial, sans-serif;
+				padding: 10px;
+}
+
+.formula {
+				height: 60px;
+				line-height: 60px;
+}
+
+.fraction {
+				float: left;
+				line-height: 15px;
+				text-align: center;
+				height: 60px;
+}
+
+.plneni {
+				height: 40px;
+				line-height: 40px;
+				float: left;
+				margin: 4px 5px 0 0;
+}
+
+.notif {
+				height: 185px;
+}
+
+.notif .scov {
+				height: 180px;
+				overflow-y: scroll;
+				padding: 0 15px;
+				font: normal 12px Arial, sans-serif;
+}
+
+.click {
+				width: 48px;
+				height: 140px;
+				position: absolute;
+				left: 15px;
+				bottom: -20;
+				cursor: pointer;
+}
+
+.clicksh {
+				left: 76px;
+}
+
+.clickvpp {
+				left: 130px;
+}
+
+.carretclick {
+				position: absolute;
+				width: 8px;
+				height: 5px;
+				left: 18px;
+				bottom: 10px;
+				background: url('../img/caretclick.png') no-repeat center top;
+				display: none;
+}
+
+.active > .carretclick {
+				display: block;
+}
